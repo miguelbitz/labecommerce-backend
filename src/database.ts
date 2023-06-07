@@ -45,17 +45,7 @@ export const createUser = (id: string, name: string, email: string, password: st
     }
     
     users.push(newUser)
-
-    console.log("Cadastro realinado com sucesso")
 }
-
-export const getAllUsers = (): void => {
-    console.table(users)
-}
-
-
-
-
 //----------------------------------PRODUCT----------------------------------
 export const createProduct = (id: string, name: string, price: number, description : string, imageUrl: string): void => {
     const newProduct = {
@@ -69,10 +59,6 @@ export const createProduct = (id: string, name: string, price: number, descripti
     products.push(newProduct)
 
     console.log("Produto criado com sucesso")
-}
-
-export const getAllProducts = (): void => {
-    console.log(products)
 }
 
 export const searchProductsByName = (name:string): void =>{
