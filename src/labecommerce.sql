@@ -54,3 +54,38 @@ SET
     description = '',
     image_url = ''
 WHERE id = '';
+
+----------------------------COMPRAS----------------------------
+
+--criando tabelas purchases
+CREATE TABLE purchases(
+    id TEXT PRIMARY KEY UNIQUE NOT NULL,
+    buyer TEXT NOT NULL,
+    total_price REAL NOT NULL,
+    created_at TEXT NOT NULL,
+
+    FOREIGN KEY (buyer) REFERENCES users(id)
+);
+
+SELECT * FROM purchases;
+
+INSERT INTO purchases (id, buyer, total_price, created_at)
+VALUES
+('p001', 'u001', 1998.24, CURRENT_TIMESTAMP),
+('p002', 'u002', 566.24, CURRENT_TIMESTAMP),
+('p003', 'u003', 234.24, CURRENT_TIMESTAMP);
+
+UPDATE purchases
+SET created_at = CURRENT_TIMESTAMP
+WHERE id = 'p003';
+
+SELECT 
+    purchases.id,
+    purchases.buyer,
+    users.name,
+    users.email,
+    purchases.total_price,
+    purchases.created_at
+FROM purchases
+INNER JOIN  users
+on purchases.buyer = users.id;
