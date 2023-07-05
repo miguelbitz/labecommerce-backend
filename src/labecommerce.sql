@@ -65,19 +65,19 @@ CREATE TABLE purchases(
     created_at TEXT NOT NULL,
 
     FOREIGN KEY (buyer) REFERENCES users(id)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
 );
 
 SELECT * FROM purchases;
 
 INSERT INTO purchases (id, buyer, total_price, created_at)
 VALUES
-('p001', 'u001', 1998.24, CURRENT_TIMESTAMP),
-('p002', 'u002', 566.24, CURRENT_TIMESTAMP),
-('p003', 'u003', 234.24, CURRENT_TIMESTAMP);
+('p004', 'u001', 10000, CURRENT_TIMESTAMP);
 
 UPDATE purchases
-SET created_at = CURRENT_TIMESTAMP
-WHERE id = 'p003';
+SET buyer = 'u002'
+WHERE id = 'p004';
 
 SELECT 
     purchases.id,
@@ -88,4 +88,39 @@ SELECT
     purchases.created_at
 FROM purchases
 INNER JOIN  users
-on purchases.buyer = users.id;
+ON purchases.buyer = users.id;
+
+------------------------TABELA DE RELACOES----------------------
+
+CREATE TABLE purchases_products(
+    purchase_id TEXT NOT NULL,
+    product_id TEXT NOT NULL,
+    quantity INTEGER NOT NULL,
+    FOREIGN KEY (purchase_id) REFERENCES purchases(id),
+    FOREIGN KEY (product_id) REFERENCES products(id)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+);
+
+INSERT INTO purchases_products (purchase_id, product_id, quantity)
+VALUES
+    ('p004', 'prod004', 1);
+
+SELECT 
+    purchases.id AS purchaseId,
+    purchases.buyer AS buyer,
+    purchases.total_price AS totalPrice,
+    purchases.created_at AS purchaseDate,
+    purchases_products.product_id AS productId,
+    purchases_products.quantity AS quantity,
+    products.name AS productName,
+    products.price AS productPrice
+FROM purchases
+INNER JOIN purchases_products
+ON purchases_products.purchase_id = purchases.id
+INNER JOIN products
+ON purchases_products.product_id = products.id;
+
+SELECT * FROM purchases_products;
+
+SELECT * FROM products;
