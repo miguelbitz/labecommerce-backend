@@ -124,3 +124,7 @@ ON purchases_products.product_id = products.id;
 SELECT * FROM purchases_products;
 
 SELECT * FROM products;
+
+DROP TABLE purchases;
+
+DROP TABLE purchases_products;
