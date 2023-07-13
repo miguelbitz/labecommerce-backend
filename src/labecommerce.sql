@@ -96,7 +96,9 @@ CREATE TABLE purchases_products(
     purchase_id TEXT NOT NULL,
     product_id TEXT NOT NULL,
     quantity INTEGER NOT NULL,
-    FOREIGN KEY (purchase_id) REFERENCES purchases(id),
+    FOREIGN KEY (purchase_id) REFERENCES purchases(id)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE,
     FOREIGN KEY (product_id) REFERENCES products(id)
     ON UPDATE CASCADE
     ON DELETE CASCADE
@@ -104,7 +106,7 @@ CREATE TABLE purchases_products(
 
 INSERT INTO purchases_products (purchase_id, product_id, quantity)
 VALUES
-    ('p004', 'prod004', 1);
+    ('pur004', 'prod004', 1);
 
 SELECT 
     purchases.id AS purchaseId,
