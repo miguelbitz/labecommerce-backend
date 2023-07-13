@@ -39,7 +39,7 @@ WHERE name LIKE '%gamer%';
 
 -- adicionando usuario na tabela
 INSERT INTO products (id, name, price, description, image_url)
-VALUES ('prod006', 'PC gamer', 6000 ,'Melhor PC do mercado', 'https://picsum.photos/seed/Pc/400');
+VALUES ('prod001', 'PC gamer', 6000 ,'Melhor PC do mercado', 'https://picsum.photos/seed/Pc/400');
 
 -- deletar produto pela ID
 DELETE FROM products
@@ -73,7 +73,7 @@ SELECT * FROM purchases;
 
 INSERT INTO purchases (id, buyer, total_price, created_at)
 VALUES
-('p004', 'u001', 10000, CURRENT_TIMESTAMP);
+('p001', 'u001', 10000, CURRENT_TIMESTAMP);
 
 UPDATE purchases
 SET buyer = 'u002'
