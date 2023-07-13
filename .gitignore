@@ -1,5 +1,4 @@
-dirnode_modules/
-.vscode
-build
-.gitignore
+**/.vscode
+**/build
+**/.gitignore
 **/node_modules
