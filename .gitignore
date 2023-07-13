@@ -1,2 +1,5 @@
-node_modules
-*.db
+dirnode_modules/
+.vscode
+build
+.gitignore
+**/node_modules
