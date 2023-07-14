@@ -72,6 +72,21 @@ O projeto aborda as seguintes ferramentas:
     "password": "1234"
 }
 ```
-`Cadastro realizado com sucesso`
+```
+{
+    Cadastro realizado com sucesso
+}
+```
+
+`DELETE /users/:id`: Deleta usuário pela ID.
+
+```
+{
+    User apagado com sucesso
+}
+```
+
+### Requisições de produtos
+
 
 
