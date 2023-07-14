@@ -39,7 +39,7 @@ WHERE name LIKE '%gamer%';
 
 -- adicionando usuario na tabela
 INSERT INTO products (id, name, price, description, image_url)
-VALUES ('prod006', 'PC gamer', 6000 ,'Melhor PC do mercado', 'https://picsum.photos/seed/Pc/400');
+VALUES ('prod001', 'PC gamer', 6000 ,'Melhor PC do mercado', 'https://picsum.photos/seed/Pc/400');
 
 -- deletar produto pela ID
 DELETE FROM products
@@ -73,7 +73,7 @@ SELECT * FROM purchases;
 
 INSERT INTO purchases (id, buyer, total_price, created_at)
 VALUES
-('p004', 'u001', 10000, CURRENT_TIMESTAMP);
+('p001', 'u001', 10000, CURRENT_TIMESTAMP);
 
 UPDATE purchases
 SET buyer = 'u002'
@@ -96,9 +96,7 @@ CREATE TABLE purchases_products(
     purchase_id TEXT NOT NULL,
     product_id TEXT NOT NULL,
     quantity INTEGER NOT NULL,
-    FOREIGN KEY (purchase_id) REFERENCES purchases(id)
-    ON UPDATE CASCADE
-    ON DELETE CASCADE,
+    FOREIGN KEY (purchase_id) REFERENCES purchases(id),
     FOREIGN KEY (product_id) REFERENCES products(id)
     ON UPDATE CASCADE
     ON DELETE CASCADE
@@ -106,7 +104,7 @@ CREATE TABLE purchases_products(
 
 INSERT INTO purchases_products (purchase_id, product_id, quantity)
 VALUES
-    ('pur004', 'prod004', 1);
+    ('pur001', 'prod001', 1);
 
 SELECT 
     purchases.id AS purchaseId,

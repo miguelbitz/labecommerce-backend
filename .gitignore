@@ -1,4 +1,3 @@
-**/.vscode
-**/build
-.gitignore
-**/node_modules
+build
+*.db
+node_modules
