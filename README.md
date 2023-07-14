@@ -149,5 +149,79 @@ O projeto aborda as seguintes ferramentas:
 }
 ```
 
+### Requisições de compras
+`GET /purchases/:id`: Retorna compra pelo ID
+```javascript
+{
+    "purchaseId": "pur001",
+    "buyerId": "u004",
+    "buyerName": "Fulano",
+    "buyerEmail": "fulano@123",
+    "totalPrice": 6000,
+    "createdAt": "2023-07-08 23:31:48",
+    "products": [
+        {
+            "id": "prod001",
+            "name": "Mouse Gamer Wireless Top",
+            "price": 250,
+            "description": "Melhor mouse do mercado",
+            "imageUrl": "undefined",
+            "quantity": 1
+        }
+    ]
+}
+```
+`GET /purchases/`: Retorna todas as compras
+```javascript
+[
+    {
+        "purchaseId": "pur001",
+        "buyerId": "u004",
+        "buyerName": "Fulano",
+        "buyerEmail": "fulano@123",
+        "totalPrice": 6000,
+        "createdAt": "2023-07-08 23:31:48"
+    },
+    {
+        "purchaseId": "pur002",
+        "buyerId": "u004",
+        "buyerName": "Fulano",
+        "buyerEmail": "fulano@123",
+        "totalPrice": 2500,
+        "createdAt": "2023-07-12 21:56:32"
+    }
+]
+```
+`POST /purchases`: Cadastra nova compra
+```javascript
+{
+    "id": "pur002",
+    "buyer": "u002",
+    "products": [
+        {
+            "id": "prod001",
+            "quantity": 1
+        },
+        {
+            "id": "prod003",
+            "quantity": 1
+        }
+    ]
+}
+```
+```
+{
+    Compra adicionada com sucesso
+}
+```
+
+`DELETE /purchases/:id`: Deleta compra pelo ID
+
+```
+{
+    Pedido cancelado com sucesso
+}
+```
+
 
 
