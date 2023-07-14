@@ -7,9 +7,6 @@ Nela são mostradas as relações entre as tabelas :
 
 ![alt text](https://uploaddeimagens.com.br/images/004/544/331/original/labecommerce.png?1689295592 "Logo Title Text 1")
 
-## Documentação do Postman
-[Link da API no POSTMAN](https://documenter.getpostman.com/view/26594213/2s93sjT8SX)
-
 ## Tecnologias
 O projeto aborda as seguintes ferramentas:
 
@@ -222,6 +219,12 @@ O projeto aborda as seguintes ferramentas:
     Pedido cancelado com sucesso
 }
 ```
+## Documentação do Postman
+[Link da API no POSTMAN](https://documenter.getpostman.com/view/26594213/2s93sjT8SX)
+
+# Criado por:
+## Miguel Alves
+![alt text](https://uploaddeimagens.com.br/images/004/544/373/original/imagem_pq.png?1689299009  "Logo Title Text 1" )
 
 
 
