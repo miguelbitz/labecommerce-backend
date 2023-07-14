@@ -20,4 +20,47 @@ O projeto aborda as seguintes ferramentas:
 * Knex
 * Postman
 
+## Caminho das Requisições (Paths)
+### Requisições de Usuários:
+* /users
+### Requisições de Produtos:
+* /products
+### Requisições de Compras:
+* /purchases
+
+## Exemplo de Requisições
+### Requisições de usuários
+`GET /users`: Retorna todos usuários cadastrados
+```javascript
+[
+    {
+        "id": "u001",
+        "name": "Miguel",
+        "email": "miguel@gamil.com",
+        "password": "miguel123",
+        "created_at": "2023-07-13 22:48:04"
+    },
+    {
+        "id": "u002",
+        "name": "Giovana",
+        "email": "gicalinda@123",
+        "password": "1234",
+        "created_at": "13/07/2023, 19:51:52"
+    },
+    {
+        "id": "u003",
+        "name": "Jota",
+        "email": "joao@123",
+        "password": "1234",
+        "created_at": "13/07/2023, 19:52:03"
+    },
+    {
+        "id": "u004",
+        "name": "Fulano",
+        "email": "fulano@123",
+        "password": "1234",
+        "created_at": "13/07/2023, 19:54:37"
+    }
+]
+```
 
