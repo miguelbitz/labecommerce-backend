@@ -63,4 +63,15 @@ O projeto aborda as seguintes ferramentas:
     }
 ]
 ```
+`POST /users`: Cadastra novo usuario
+```javascript
+{
+    "id":"u005",
+    "name": "Ciclano",
+    "email": "ciclano@123",
+    "password": "1234"
+}
+```
+`Cadastro realizado com sucesso`
+
 
