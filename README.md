@@ -87,6 +87,67 @@ O projeto aborda as seguintes ferramentas:
 ```
 
 ### Requisições de produtos
+`GET /products`: Retorna todos produtos cadastrados
+```javascript
+[
+    {
+        "id": "prod001",
+        "name": "Mouse Gamer Wireless Top",
+        "price": 250,
+        "description": "Melhor mouse do mercado",
+        "image_url": "undefined"
+    },
+    {
+        "id": "prod002",
+        "name": "Monitor",
+        "price": 900,
+        "description": "Melhor monitor do mercado",
+        "image_url": "https://picsum.photos/seed/Monitor/400"
+    },
+    {
+        "id": "prod003",
+        "name": "Teclado games",
+        "price": 500,
+        "description": "Melhor teclado do mercado",
+        "image_url": "https://picsum.photos/seed/Teclado/400"
+    }
+]
+```
+`POST /products`: Cadastra novo produto
+```javascript
+{
+    "id":"prod009",
+    "name": "Webcam 1080p",
+    "price": 279.99,
+    "description": "Full hd",
+    "imageUrl": "https://picsum.photos/seed/Webcam/400"
+}
+```
+```
+{
+    Produto cadastrado com sucesso
+}
+```
+
+`DELETE /products/:id`: Deleta produto pela ID.
+
+```
+{
+    Produto apagado com sucesso
+}
+```
+
+`PUT /products/:id`: Edita produto pela ID
+```javascript
+{
+    "name": "Pendrive USB3.0 2023"
+}
+```
+```
+{
+    Produto atualizado com sucesso
+}
+```
 
 
 
