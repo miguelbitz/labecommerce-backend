@@ -226,5 +226,5 @@ O projeto aborda as seguintes ferramentas:
 ## Miguel Alves
 ![alt text](https://uploaddeimagens.com.br/images/004/544/373/original/imagem_pq.png?1689299009  "Logo Title Text 1" )
 
-
+[Linkedin](https://www.linkedin.com/in/miguelbitz/)
 
